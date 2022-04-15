@@ -1,6 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { useRouter } from 'next/router';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function Alternate() {
+  const router = useRouter();
+  console.log(router);
+
   return (
     <View style={styles.container}>
       <Text accessibilityRole="header" style={styles.text}>
@@ -11,7 +15,7 @@ export default function Alternate() {
         Go Back
       </Text>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -28,4 +32,4 @@ const styles = StyleSheet.create({
   link: {
     color: 'blue',
   },
-})
+});
